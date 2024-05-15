@@ -1,0 +1,55 @@
+columns:
+  - Transaction Type
+  - Channel
+  - Is 3DS
+  - Is Token
+  - Is Disputable?
+  - Decision
+  - Decline Reason Code
+  - Issuer Name
+  - Issuer Country
+  - Issuer Region
+  - Funding source
+  - Acquirer Name
+  - Acquirer Country
+  - Acquirer Region
+  - Jurisdiction
+  - Is Disputed?
+  - Is Fraud?
+  - Dispute Type
+  - Amount
+
+groups:
+  issuer:
+    title: Which issuer has problems?
+    info: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    groups: [Issuer Region, Issuer Country, Funding source, Issuer Name]
+    start: 5
+  acquirer:
+    title: Which acquirer has problems?
+    info: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    groups: [Acquirer Region, Acquirer Country, Funding source, Acquirer Name]
+    start: 5
+  issuer-acquired:
+    title: Which issuer-acquirer mix has problems?
+    info: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    groups: [Issuer Name, Acquirer Name]
+    leaf: true
+    start: 1
+  transaction:
+    title: Which transactions have problems?
+    info: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    groups:
+      - Decline Reason Code
+      - Transaction Type
+      - Channel
+      - Is 3DS
+      - Is Disputable?
+    showKey: true
+    start: 1
+
+metrics:
+  - Is Disputed?
+  - Is Fraud?
+  - Amount
+  - Count

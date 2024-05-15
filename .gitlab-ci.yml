@@ -1,0 +1,15 @@
+validate:
+  image: gramener/builderrors
+  script: builderrors
+
+deploy:
+  stage: deploy
+  script: deploy
+  variables:
+    SERVER: gramener.com
+    URL: cardtransactions
+    VERSION: static
+    SETUP: python setup.py
+  environment:
+    name: production
+    url: https://gramener.com/cardtransactions/
