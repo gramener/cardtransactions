@@ -7,7 +7,6 @@ import {
   GROUP,
   LEVEL,
   RANK,
-  IMPACT,
 } from "https://cdn.jsdelivr.net/npm/@gramex/insighttree@3.2/dist/insighttree.js";
 
 const $output = document.querySelector("#output");
@@ -70,7 +69,7 @@ Object.entries(config.groups).forEach(async ([group, { groups, leaf, start, show
                     <td>#${row[RANK]}</th>
                     <td style="padding-left:${row[LEVEL] * 1.5}rem">
                       <span class="insight-toggle"></span>
-                      ${row[LEVEL] && showKey ? `${groups[row[LEVEL] - 1]} = ` : "" } ${row[GROUP]}
+                      ${row[LEVEL] && showKey ? `${groups[row[LEVEL] - 1]} = ` : ""} ${row[GROUP]}
                     </td>
                     <td class="text-end">${num(row["Is Fraud?"])}</td>
                     <td class="text-end">${num(row["Count"])}</td>
