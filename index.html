@@ -13,6 +13,7 @@
       max-width: 40rem;
       margin: 0 auto;
     }
+
     .insight-current td {
       background-color: inherit;
     }
@@ -44,8 +45,21 @@
 
   <div class="container">
     <h1 class="display-1 my-4 text-center">Card Transactions</h1>
-    <h2 class="display-6 text-center my-3">Which card transactions have the most disputes and fraud?</h2>
-    <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    <h2 class="display-6 text-center my-3">Which card transactions have the highest fraud?</h2>
+    <div class="info">
+      <p>When there's fraud, it's important to understand <strong>why</strong>.</p>
+      <p>Usually, we start by looking for the biggest gap.</p>
+      <ul>
+        <li>Which issuers?</li>
+        <li>Which acquirers?</li>
+        <li>Which country?</li>
+        <li>Which channels?</li>
+        <li>Which types?</li>
+      </ul>
+      <p>But within an issuer, one country's good performance can <strong>offset</strong> by another country's bad performance, averaging out the results.</p>
+      <p>That forces us to drill down.</p>
+      <p>These <strong><a href="https://gramener.com/insighttree/">insight trees</a></strong> automates this drill-down. It goes through <strong>every combination</strong> in the hierarchy, finds the largest gaps, and highlights them starting with the biggest.</p>
+    </div>
     <div id="output">
       <div class="text-center my-5 fs-1">
         <div class="spinner-border text-center" style="width: 6rem; height: 6rem" role="status">
