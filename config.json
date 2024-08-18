@@ -1,0 +1,67 @@
+{
+  "columns": [
+    "Transaction Type",
+    "Channel",
+    "Is 3DS",
+    "Is Token",
+    "Is Disputable?",
+    "Decision",
+    "Decline Reason Code",
+    "Issuer Name",
+    "Issuer Country",
+    "Issuer Region",
+    "Funding source",
+    "Acquirer Name",
+    "Acquirer Country",
+    "Acquirer Region",
+    "Jurisdiction",
+    "Is Disputed?",
+    "Is Fraud?",
+    "Dispute Type",
+    "Amount"
+  ],
+  "groups": {
+    "issuer": {
+      "title": "Which issuer has problems?",
+      "info": "Move the slider to see where the most fraud happens across issuers, regions *and* countries.\n\nBy \"most fraud\", we mean high fraud rates combined with high volumes. This is:\n\n- [Wells Fargo USA](#1) has the highest overall fraud level\n- [JP Morgan USA](#4) is the next biggest problem area\n- [Credit (not debit)](#7) is specifically the issue for Wells Fargo USA\n- [Bank of America USA](#8) is the next biggest problem area\n- [Debug (not credit)](#11) is JP Morgan's bigger problem (but [credit is close](#12))\n- [Barclays UK](#14) is the next biggest problem area\n- [Nordea Ireland's debug](#17) follows\n",
+      "groups": [
+        "Issuer Name",
+        "Issuer Region",
+        "Issuer Country",
+        "Funding source"
+      ],
+      "start": 1
+    },
+    "issuer-acquired": {
+      "title": "Which issuer-acquirer mix has problems?",
+      "info": "Let's dig deeper. Do problems increase for issuers with specific acquirers? Or vice versa?\n\n- [Banco Bradesco's debit cards acquired by FNB Omaha](#1) have a surprisingly high fraud rate\n- [TSB Bank credit cards with PKO Bank](#2) is another example\n- [Bank of New Zealand credit cards with IndusInd Bank](#3) is yet another problem area\n",
+      "groups": [
+        "Issuer Name",
+        "Acquirer Name",
+        "Funding source"
+      ],
+      "showKey": true,
+      "leaf": true,
+      "start": 1
+    },
+    "transaction": {
+      "title": "Which transactions have problems?",
+      "info": "We can dig deeper with any set of combinations. This tree explores the combinations of:\n\n- Decline Reason Code\n- Transaction Type\n- Channel\n- Is 3DS\n- Is Disputable?\n\nPlay around and see what you find!\n",
+      "groups": [
+        "Decline Reason Code",
+        "Transaction Type",
+        "Channel",
+        "Is 3DS",
+        "Is Disputable?"
+      ],
+      "showKey": true,
+      "start": 1
+    }
+  },
+  "metrics": [
+    "Is Disputed?",
+    "Is Fraud?",
+    "Amount",
+    "Count"
+  ]
+}

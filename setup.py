@@ -1,6 +1,5 @@
 import json
 import os
-import yaml
 import pandas as pd
 
 folder = os.path.dirname(__file__)
@@ -8,11 +7,8 @@ folder = os.path.dirname(__file__)
 
 def main():
     source = os.path.join(folder, "transactions.parquet")
-    config_file = os.path.join(folder, "config.yaml")
-    with open(config_file) as handle:
-        config = yaml.safe_load(handle)
-    with open(os.path.join(folder, "config.json"), "w") as handle:
-        json.dump(config, handle)
+    config_file = os.path.join(folder, "config.json")
+    config = json.load(open(config_file))
     source_mtime = max(os.path.getmtime(src) for src in [source, config_file, __file__])
 
     for group, conf in config["groups"].items():
